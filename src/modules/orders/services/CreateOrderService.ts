@@ -61,8 +61,6 @@ class CreateOrderService {
         product.quantity,
     );
 
-    console.log(findProductsWithNoQuantityAvailable);
-
     if (findProductsWithNoQuantityAvailable.length) {
       throw new AppError(
         `the quantity ${findProductsWithNoQuantityAvailable[0].quantity} is not available for ${findProductsWithNoQuantityAvailable[0].id}`,
